@@ -1,0 +1,30 @@
+<html>
+
+<head>
+	<title>Image Search</title>
+</head>
+
+<body>
+	<h3 style="text-align:center">Image Search</h3>
+	<p>
+		Perform a search: <a id="testUrl"></a><br />
+		See search history:<a id="historyUrl"></a>
+	</p>
+</body>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(event) { 
+	console.log("running: " + window.location);
+		var testUrl = document.getElementById("testUrl");
+		var historyUrl = document.getElementById("historyUrl");
+		var l = window.location + "api/";
+		console.log(testUrl);
+		testUrl.text = l + "imagesearch/ambergris?offset=3";
+		testUrl.href = testUrl.text;
+
+		historyUrl.text = l + "latest/imagesearch";
+		historyUrl.href = historyUrl.text;
+	});
+
+</script>
+</html
